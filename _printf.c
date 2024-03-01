@@ -14,14 +14,14 @@ int _printf(const char *format, ...)
 
 	os = malloc(1000);
 	/**while (format[i] != '\0')
-	{
-		if (format[i] == '%')
-			j++;
-		i++;
-	}*/
+	  {
+	  if (format[i] == '%')
+	  j++;
+	  i++;
+	  }*/
 	va_start(parm, format);
 	/**i = 0;
-	j = 0;*/
+	  j = 0;*/
 	while (format[i] != '\0')
 	{
 		if (format[i] == '%')
@@ -29,16 +29,13 @@ int _printf(const char *format, ...)
 			i++;
 			if (format[i] == 'c')
 			{
-				
+
 				os[j] = (char)va_arg(parm, int);
 			}
 			else if (format[i] == 's')
 			{
-				printf("testing char\n");
 				os[j] = '\0';
-				printf("test\n");
 				_strcat(os, va_arg(parm, char *));
-				printf("os\n");
 				j = _strlen(os) - 1;
 			}
 			else if (format[i] == '%')
