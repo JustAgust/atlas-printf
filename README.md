@@ -4,18 +4,11 @@ THIS README FILE IS FOR THE "printf" PROJECT GIVEN BY CHASE SPARKS, JOSH MERRICK
 ## Description
 The printf() function is a tool used in C programming used to print a string of output. It allows the output to print exactly what the user wants it to say. You can use it to print out different kinds of information, like numbers or words and print them in a nice, clean way. Some of the printf() specifiers are listed below:
 
-// I know there are many more we wil use but these are the ones I could come up with for now
 + %i: Prints an integer.
 + %d: Prints a didget.
 + %c: Prints one single character.
 + %s: Prints a string of characters.
-+ %r: Prints a reversed string of characters.
-+ %u: Prints an unsigned integer(s).
-+ %x: Prints a hexidecimal with lowercase letters.
-+ %X: Prints a hexidecimal with uppercase letters.
-+ %p: Prints a void * pointer that has to be printed in hexidecimal format.
 + %%: Prints a '%' percent sign.
-
 
 ## Project Requirements
 + Allowed editors: vi, vim, emacs
