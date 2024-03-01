@@ -29,9 +29,8 @@ int _printf(const char *format, ...)
 			i++;
 			if (format[i] == 'c')
 			{
-				printf("above string\n");
+				
 				os[j] = (char)va_arg(parm, int);
-				printf("string?\n");
 			}
 			else if (format[i] == 's')
 			{
