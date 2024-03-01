@@ -36,7 +36,7 @@ int _printf(const char *format, ...)
 			{
 				os[j] = '\0';
 				_strcat(os, va_arg(parm, char *));
-				j = _strlen(os) - 1;
+				j = _strlen(os);
 			}
 			else if (format[i] == '%')
 				os[j] = '%';
