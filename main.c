@@ -13,6 +13,7 @@ int main(void)
     int len2;
     unsigned int ui;
     void *addr;
+    char *str = "test string";
 /**betty compliance!*/
     _printf("%s", "This sentence is retrieved from va_args!\n");
   _printf("Complete the sentence: You %s nothing, Jon Snow.\n", "know");
