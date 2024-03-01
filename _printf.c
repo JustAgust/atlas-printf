@@ -13,15 +13,15 @@ int _printf(const char *format, ...)
 	va_list parm;
 
 	os = malloc(1000);
-	while (format[i] != '\0')
+	/**while (format[i] != '\0')
 	{
 		if (format[i] == '%')
 			j++;
 		i++;
-	}
+	}*/
 	va_start(parm, format);
-	i = 0;
-	j = 0;
+	/**i = 0;
+	j = 0;*/
 	while (format[i] != '\0')
 	{
 		if (format[i] == '%')
