@@ -28,14 +28,21 @@ int _printf(const char *format, ...)
 		{
 			i++;
 			if (format[i] == 'c')
+			{
+				printf("above string\n");
 				os[j] = (char)va_arg(parm, int);
+				printf("string?\n");
+			}
 			else if (format[i] == 's')
 			{
+				printf("testing char\n");
 				os[j] = '\0';
+				printf("test\n");
 				_strcat(os, va_arg(parm, char *));
+				printf("os\n");
 				j = _strlen(os) - 1;
 			}
-			if (format[i] == '%')
+			else if (format[i] == '%')
 				os[j] = '%';
 		}
 		else (os[j] = format[i]);
