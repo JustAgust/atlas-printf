@@ -16,12 +16,10 @@ int _printf(const char *format, ...)
 
 	os = malloc(1024);
 	if (os == NULL)
+	{
 		return (-1);
+	}
 	va_start(parm, format);
-	/**
-	 * i = 0;
-	 * j = 0;
-	 */
 	while (format[i] != '\0')
 	{
 		if (format[i] == '%')
