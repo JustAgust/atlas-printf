@@ -22,7 +22,7 @@ int _printf(const char *format, ...)
 			}
 			else if (format[i] == 's')
 			{
-				char *args = va_arg(parm, char *);
+				args = va_arg(parm, char *);
 				if (args == NULL || args[o] == '\0')
 				{
 					write(1, "(null)", 6);
