@@ -37,7 +37,10 @@ int _printf(const char *format, ...)
 			else if (format[i] == '%')
 				os[j] = '%';
 		}
-		else (os[j] = format[i]);
+		else 
+		{
+			(os[j] = format[i]);
+		}
 		i++;
 		j++;
 	}
