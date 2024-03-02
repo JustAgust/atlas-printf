@@ -34,29 +34,29 @@ int _printf(const char *format, ...)
 				char *arg = va_arg(parm, char *);
 				if (arg == NULL)
 				{
-					_strcat(os, "(null)");
-				}
-				else
-				{
-					_strct(os, arg);
-				}
-				j = _strlen(os) - 1;
-			}
-			else if (format[i] == '%')
-				os[j] = '%';
-		}
-		else
-		{
-			(os[j] = format[i]);
-		}
-		i++;
-		j++;
-	}
-	os[j] = '\0';
-	write(1, os, j);
-	va_end(parm);
-	free(os);
-	return (j);
+					_strcat(os, "(null)";
+							}
+							else
+							{
+							_strct(os, arg);
+							}
+							j = _strlen(os) - 1;
+							}
+							else if (format[i] == '%')
+							os[j] = '%';
+							}
+							else
+							{
+							(os[j] = format[i]);
+							}
+							i++;
+							j++;
+							}
+							os[j] = '\0';
+							write(1, os, j);
+							va_end(parm);
+							free(os);
+							return (j);
 }
 
 
