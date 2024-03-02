@@ -31,8 +31,8 @@ int _printf(const char *format, ...)
 			else if (format[i] == 's')
 			{
 				/**os[j] = '\0';*/
-				_strcat(os, char *);
-				j += _strlen(os);
+				_strcat(os, va_arg(parm, char *));
+				j = _strlen(os) - 1;
 			}
 			else if (format[i] == '%')
 				os[j] = '%';
