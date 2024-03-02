@@ -11,6 +11,11 @@ char *_strcat(char *dest, char *src)
 	int i = 0;
 	int j = 0;
 
+	if (src == NULL)
+	{
+		return (NULL);
+	}
+
 	while (dest[j] != '\0')
 	{
 		j++;
