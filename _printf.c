@@ -18,8 +18,10 @@ int _printf(const char *format, ...)
 	if (os == NULL)
 		return (-1);
 	va_start(parm, format);
-	/**i = 0;
-	  j = 0;*/
+	/**
+	 * i = 0;
+	 * j = 0;
+	 */
 	while (format[i] != '\0')
 	{
 		if (format[i] == '%')
@@ -39,7 +41,7 @@ int _printf(const char *format, ...)
 			else if (format[i] == '%')
 				os[j] = '%';
 		}
-		else 
+		else
 		{
 			(os[j] = format[i]);
 		}
