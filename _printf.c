@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 	char *os;
 	va_list parm;
 
-	os = malloc(1000);
+	os = malloc(1024);
 	if (os == NULL)
 		return (-1);
 	va_start(parm, format);
