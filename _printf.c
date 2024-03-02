@@ -1,8 +1,10 @@
 #include "main.h"
 /**
  *_printf - prints formatted string
- *
- *
+ *@i: format string iterator
+ *@j: output string iterator
+ *@os: pointer to output string
+ *@parm: variadic parameters/args
  * Return: output length
  */
 int _printf(const char *format, ...)
