@@ -33,7 +33,8 @@ int _printf(const char *format, ...)
 			else if (format[i] == 's')
 			{
 				os[j] = '\0';
-				_strcat(os, va_arg(parm, char *));
+				char *args = va_arg(parm, char *);
+				_strcat(os, args);
 				j = _strlen(os) - 1;
 			}
 			else if (format[i] == '%')
