@@ -41,7 +41,7 @@ int _printf(const char *format, ...)
 			else if (format[i] == 'd' || format[i] == 'i')
 			{
 				int number = va_arg(parm, int);
-				/*itoa(number, (char *)t, 10);*/
+				itoa(number, (char *)t, 10);
 				while (t[k] != '\0')
 				{
 					write(1, t, 1);

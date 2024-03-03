@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <unistd.h>
+#include <stdbool.h>
 
 
 typedef struct print{
@@ -19,5 +20,6 @@ int _putchar(char c);
 char *_strcat(char *dest, char *src);
 size_t strlen(const char *str);
 char* strcpy(char* destination, const char* source);
-
+void reverse(chat str[], int lenght);
+char *itoa(int num, char *str, int base);
 #endif
