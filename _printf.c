@@ -8,6 +8,7 @@ int _printf(const char *format, ...)
 	int i = 0;
 	int o = 0;
 	int k = 0;
+	int args = 0;
 	char t[1024];
 	va_list parm;
 	va_start(parm, format);
