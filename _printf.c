@@ -8,7 +8,6 @@ int _printf(const char *format, ...)
 	int i = 0;
 	int o = 0;
 	int k = 0;
-	int args = 0;
 	char t[1024];
 	va_list parm;
 	va_start(parm, format);
@@ -24,7 +23,7 @@ int _printf(const char *format, ...)
 			}
 			else if (format[i] == 's')
 			{
-				args = va_arg(parm, char *);
+				char *args = va_arg(parm, char *);
 				if (args == NULL || args[o] == '\0')
 				{
 					write(1, "(null)", 6);
