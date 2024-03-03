@@ -61,7 +61,7 @@ int _printf(const char *format, ...)
 	}
 	va_end(parm);
 }
-int main()
+/**int main()
 {
 	_printf("Hello! %i because breakfast\n", 500);
-}
+}*/
