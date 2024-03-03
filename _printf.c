@@ -60,5 +60,5 @@ int _printf(const char *format, ...)
 		i++;
 	}
 	va_end(parm);
-	return (0);
+	
 }
