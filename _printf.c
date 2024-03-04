@@ -11,12 +11,10 @@ int _printf(const char *format, ...)
 {
 	int i = 0;
 	int j = 0;
-	char *t;
-	int k = 0;
+	/*int o = 0;*/
 	char *os;
 	char *args;
 	va_list parm;
-
 	os = malloc(1024);
 	if (os == NULL)
 	{
@@ -30,7 +28,6 @@ int _printf(const char *format, ...)
 			i++;
 			if (format[i] == 'c')
 			{
-
 				os[j] = (char)va_arg(parm, int);
 			}
 			else if (format[i] == 's')
@@ -38,26 +35,25 @@ int _printf(const char *format, ...)
 				os[j] = '\0';
 				args = va_arg(parm, char *);
 				if (args == NULL)
+					args = "(null)";
 					_strcat(os, "(null)");
 				else
 					_strcat(os, args);
 				j = _strlen(os) - 1;
 			}
-			else if (format[i] == 'd' || format[i] == 'i')
-                          {
-                                  int number = va_arg(parm, int);
-                                  itoa(number, (char *)t, 10);
-                                  while (t[k] != '\0')
-                                  {
-                                          write(1, t, 1);
-                                          k++;
-                                  }
-                                  k = 0;
- 
-                          }
+
+
+			_strcat(os, args);
+			j = _strlen(os) - 1;
 			else if (format[i] == '%')
 				os[j] = '%';
 		}
+		else if (format[i] == '%')
+			os[j] = '%';
+	}
+	else
+	{
+		(os[j] = format[i]);
 		else
 		{
 			(os[j] = format[i]);
@@ -65,11 +61,17 @@ int _printf(const char *format, ...)
 		i++;
 		j++;
 	}
+	i++;
+	j++;
+}
+os[j] = '\0';
+write(1, os, j);
+va_end(parm);
+free(os);
+return (j);
 	os[j] = '\0';
 	write(1, os, j);
 	va_end(parm);
 	free(os);
 	return (j);
 }
-
-
