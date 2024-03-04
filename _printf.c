@@ -34,8 +34,10 @@ int _printf(const char *format, ...)
 				os[j] = '\0';
 				args = va_arg(parm, char *);
 				if (args == NULL)
+				{
 					args = "(null)";
 				_strcat(os, "(null)");
+				}
 
 				else
 					_strcat(os, args);
