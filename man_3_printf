@@ -2,18 +2,22 @@
 .SH NAME
  man_3_printf \- student created printf with limited functionality.
 
-.SH SYNOPSIS
+.SH Format Specifiers
 .B #include "main.h"
 .B #include <stdio.h>
 .B #include <stdarg.h>
 .B #include <stdlib.h>
 .B #include <string.h>
 
-.B int _printf(const char *format, ...);
+.SH Synopsis
+This _printf function is a basic implementation of the printf function in C, capable of processing format specifiers for characters, strings, and integers, handling variadic arguments, and generating an output string accordingly.
+
 .SH DESCRIPTION
 .B _printf
-Prints formatted output to the standard output.
+This _printf function parses a format string, processes format specifiers such as %c, %s, %d, and %i, handles variadic arguments, and generates an output string accordingly. It allocates memory for the output string, writes the generated string to the standard output, and frees the allocated memory afterwards, returning the length of the output string. However, it's a simplified version of the standard printf function and lacks support for many advanced features and format specifiers.
+
 .SH AUTHORS
 .B JOSH MERRICK CHASE SPARKS ASHLEY RAMER
+
 .SH COPYRIGHT
 .B Threes not a crowd!
