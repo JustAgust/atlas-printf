@@ -40,7 +40,10 @@ int _printf(const char *format, ...)
                                   {
                                           fputs("(null)", stdout);
                                   }
+				else
+				{
 				_strcat(os, args);
+				}
 				j = _strlen(os) - 1;
 			}
 			else if (format[i] == '%')
