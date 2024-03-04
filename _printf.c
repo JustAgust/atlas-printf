@@ -12,6 +12,7 @@ int _printf(const char *format, ...)
 	int i = 0;
 	int j = 0;
 	char *os;
+	char *args;
 	va_list parm;
 
 	os = malloc(1024);
@@ -33,7 +34,7 @@ int _printf(const char *format, ...)
 			else if (format[i] == 's')
 			{
 				os[j] = '\0';
-				char *args = va_arg(parm, char *);
+				args = va_arg(parm, char *);
 				_strcat(os, args);
 				j = _strlen(os) - 1;
 			}
