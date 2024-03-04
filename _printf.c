@@ -40,8 +40,8 @@ int _printf(const char *format, ...)
                                   {
                                           write(1, "(null)", 6);
                                   }
-				else
-				{*/
+				else*/
+				{
 
 				_strcat(os, args);
 				j = _strlen(os) - 1;
