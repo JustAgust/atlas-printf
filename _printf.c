@@ -35,12 +35,12 @@ int _printf(const char *format, ...)
 			else if (format[i] == 's')
 			{
 				os[j] = '\0';
-				args = va_arg(parm, char *);
-				/*if (args == NULL || args[o] == '\0')
+				char *args = va_arg(parm, char *);
+				if (args == NULL)
                                   {
                                           write(1, "(null)", 6);
                                   }
-				else*/
+				else
 				_strcat(os, args);
 				j = _strlen(os) - 1;
 			}
