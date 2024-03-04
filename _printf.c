@@ -38,11 +38,10 @@ int _printf(const char *format, ...)
 				args = va_arg(parm, char *);
 				if (args == NULL)
                                   {
-                                          write(1, "(null)", 6);
+                                          fputs("(null)", stdout);
                                   }
 				else
-				_strcat(os, args);
-				j = _strlen(os) - 1;
+				fputs(args, stdout);
 			}
 			else if (format[i] == '%')
 				os[j] = '%';
