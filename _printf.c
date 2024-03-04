@@ -41,11 +41,8 @@ int _printf(const char *format, ...)
                                           write(1, "(null)", 6);
                                   }
 				else*/
-				{
-
 				_strcat(os, args);
 				j = _strlen(os) - 1;
-				}
 			}
 			else if (format[i] == '%')
 				os[j] = '%';
