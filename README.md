@@ -1,6 +1,30 @@
 
- 41                                           write(1## printf
+## atlas-printf
 THIS README FILE IS FOR THE "printf" PROJECT GIVEN BY CHASE SPARKS, JOSH MERRICK, AND ASHLEY RAMER. THIS PROJECT WILL BE DUE ON FEBRUARY 26, 2024 AT ATLAS SCHOOL IN TULSA, OKLAHOMA.
+
+
+## Flow Chart
+
+Start:  This is the starting point of the _printf function.
+1. Initialize i, j, os, args, parm:  At this step, variables i and j are initialized to zero to track the current position in the format string and the output string, respectively. Memory is allocated for the output string (os) and other necessary variables like args and parm are initialized.
+---->
+2. Allocate memory for os:  Memory is dynamically allocated to hold the output string. The size is chosen to be 1024 bytes in this implementation.
+---->
+3. Check if allocation was successful:  This checks if the memory allocation for the output string was successful. If not, the function returns -1.
+---->
+4. Initialize parm with format:  The va_list parm is initialized with the format string.
+---->
+5. Loop through format characters:  This step involves iterating through each character in the format string.
+---->
+6. End of format string:  This checks if the end of the format string has been reached. If so, the processing of the format string is complete.
+<-- or -->
+7. End of Format Specifiers:  This checks if all format specifiers have been processed. If so, it proceeds to write the output string to stdout.
+---->
+8. Write output string to stdout:  This step involves writing the generated output string to the standard output.
+---->
+9. Free memory allocated for os:  After writing the output string, the dynamically allocated memory for the output string is released to avoid memory leaks.
+End:  This marks the end of the _printf function.
+
 
 ## Description
 The printf() function is a tool used in C programming used to print a string of output. It allows the output to print exactly what the user wants it to say. You can use it to print out different kinds of information, like numbers or words and print them in a nice, clean way. Some of the printf() specifiers are listed below:
