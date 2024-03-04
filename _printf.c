@@ -37,30 +37,29 @@ int _printf(const char *format, ...)
 				os[j] = '\0';
 				args = va_arg(parm, char *);
 				if (args == NULL)
-                                  {
-                                          fputs("(null)", stdout);
-                                  }
-				else
-				{
-				_strcat(os, args);
-				}
-				j = _strlen(os) - 1;
+					args = "(null)";
 			}
-			else if (format[i] == '%')
-				os[j] = '%';
+			else
+			{
+				_strcat(os, args);
+			}
+			j = _strlen(os) - 1;
 		}
-		else
-		{
-			(os[j] = format[i]);
-		}
-		i++;
-		j++;
+		else if (format[i] == '%')
+			os[j] = '%';
 	}
-	os[j] = '\0';
-	write(1, os, j);
-	va_end(parm);
-	free(os);
-	return (j);
+	else
+	{
+		(os[j] = format[i]);
+	}
+	i++;
+	j++;
+}
+os[j] = '\0';
+write(1, os, j);
+va_end(parm);
+free(os);
+return (j);
 }
 
 
