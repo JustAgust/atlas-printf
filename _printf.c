@@ -36,12 +36,13 @@ int _printf(const char *format, ...)
 			{
 				os[j] = '\0';
 				args = va_arg(parm, char *);
-				if (args == NULL || args[o] == '\0')
+				/*if (args == NULL || args[o] == '\0')
                                   {
                                           write(1, "(null)", 6);
                                   }
 				else
-				{
+				{*/
+
 				_strcat(os, args);
 				j = _strlen(os) - 1;
 				}
