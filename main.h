@@ -11,7 +11,6 @@
 /** Insert prototypes for printf project below */
 int _strlen(char *s);
 int _printf(const char *format, ...);
-int _putchar(char c);
 char *_strcat(char *dest, char *src);
 void reverse(char str[], int lenght);
 char *itoa(int num, char *str, int base);
