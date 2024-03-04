@@ -11,7 +11,6 @@ int _printf(const char *format, ...)
 {
 	int i = 0;
 	int j = 0;
-	/*int o = 0;*/
 	char *os;
 	char *args;
 	va_list parm;
@@ -36,21 +35,20 @@ int _printf(const char *format, ...)
 				args = va_arg(parm, char *);
 				if (args == NULL)
 					args = "(null)";
-					_strcat(os, "(null)");
+				_strcat(os, "(null)");
 				else
 					_strcat(os, args);
 				j = _strlen(os) - 1;
+
 			}
-			
+			else if (format[i] == '%')
+				os[j] = '%';
 		}
-		else if (format[i] == '%')
-			os[j] = '%';
-	}
-	else
-	{
-		(os[j] = format[i]);
 		else
 		{
+			(os[j] = format[i]);
+
+
 		}
 		i++;
 		j++;
