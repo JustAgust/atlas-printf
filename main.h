@@ -9,9 +9,8 @@
 #include <stdbool.h>
 
 /** Insert prototypes for printf project below */
-int _strlen(char *s);
 int _printf(const char *format, ...);
-char *_strcat(char *dest, char *src);
 void reverse(char str[], int lenght);
+char* int_to_str(int num);
 char *itoa(int num, char *str, int base);
 #endif
