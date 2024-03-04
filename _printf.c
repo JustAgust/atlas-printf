@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 	int i = 0;
 	int j = 0;
 	int t = 0;
-	int t[];
+	char *t;
 	int k = 0;
 	char *os;
 	char *args;
