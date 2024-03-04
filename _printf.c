@@ -42,6 +42,18 @@ int _printf(const char *format, ...)
 					_strcat(os, args);
 				j = _strlen(os) - 1;
 			}
+			else if (format[i] == 'd' || format[i] == 'i')
+                          {
+                                  int number = va_arg(parm, int);
+                                  itoa(number, (char *)t, 10);
+                                  while (t[k] != '\0')
+                                  {
+                                          write(1, t, 1);
+                                          k++;
+                                  }
+                                  k = 0;
+ 
+                          }
 			else if (format[i] == '%')
 				os[j] = '%';
 		}
