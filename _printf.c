@@ -1,65 +1,57 @@
-#include <stdlib.h>
-#include <stdarg.h>
-#include <stdio.h>
 #include "main.h"
-
+/**
+ *_printf - prints formatted string
+ *@i: format string iterator
+ *@j: output string iterator
+ *@os: pointer to output string
+ *@parm: variadic parameters/args
+ * Return: output length
+ */
 int _printf(const char *format, ...)
 {
 	int i = 0;
-	int o = 0;
-	int k = 0;
-	char t[1024];
+	int j = 0;
+	char *os;
 	va_list parm;
+
+	os = malloc(1024);
+	if (os == NULL)
+	{
+		return (-1);
+	}
 	va_start(parm, format);
 	while (format[i] != '\0')
 	{
-		if (format[i] == '%') 
+		if (format[i] == '%')
 		{
 			i++;
 			if (format[i] == 'c')
 			{
-				int p = va_arg(parm, int);
-				write(1, &p, 1);
+
+				os[j] = (char)va_arg(parm, int);
 			}
 			else if (format[i] == 's')
 			{
+				os[j] = '\0';
 				char *args = va_arg(parm, char *);
-				if (args == NULL || args[o] == '\0')
-				{
-					write(1, "(null)", 6);
-				}
-				else
-				{
-					while (args[o] != '\0')
-					{
-						write(1, args + o, 1);
-						o++;
-					}
-				}
-				o = 0;
+				_strcat(os, args);
+				j = _strlen(os) - 1;
 			}
-			else if (format[i] == 'd' || format[i] == 'i')
-			{
-				int number = va_arg(parm, int);
-				itoa(number, (char *)t, 10);
-				while (t[k] != '\0')
-				{
-					write(1, t, 1);
-					k++;
-				}
-				k = 0;
-
-			}
+			else if (format[i] == '%')
+				os[j] = '%';
 		}
-		else 
-		{        
-			write(1, format + i, 1);
-
+		else
+		{
+			(os[j] = format[i]);
 		}
-
 		i++;
+		j++;
 	}
+	os[j] = '\0';
+	write(1, os, j);
 	va_end(parm);
-	return (0);
-	
+	free(os);
+	return (j);
 }
+
+
