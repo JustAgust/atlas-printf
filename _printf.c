@@ -36,11 +36,13 @@ int _printf(const char *format, ...)
 				if (args == NULL)
 					args = "(null)";
 				_strcat(os, "(null)");
-				else
-				
-					_strcat(os, args);
+			}
+			else
+			{
+
+				_strcat(os, args);
 				j = _strlen(os) - 1;
-				
+
 
 			}
 			else if (format[i] == '%')
