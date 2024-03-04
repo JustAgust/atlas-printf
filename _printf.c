@@ -39,7 +39,7 @@ int _printf(const char *format, ...)
 				if (args == NULL)
 					args = "(null)";
 			}
-			else
+
 			
 			_strcat(os, args);
 			j = _strlen(os) - 1;
