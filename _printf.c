@@ -37,8 +37,10 @@ int _printf(const char *format, ...)
 					args = "(null)";
 				_strcat(os, "(null)");
 				else
+				{
 					_strcat(os, args);
 				j = _strlen(os) - 1;
+				}
 
 			}
 			else if (format[i] == '%')
