@@ -35,7 +35,7 @@ int _printf(const char *format, ...)
 			else if (format[i] == 's')
 			{
 				os[j] = '\0';
-				char *args = va_arg(parm, char *);
+				args = va_arg(parm, char *);
 				if (args == NULL)
                                   {
                                           write(1, "(null)", 6);
