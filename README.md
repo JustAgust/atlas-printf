@@ -5,25 +5,20 @@ THIS README FILE IS FOR THE "printf" PROJECT GIVEN BY CHASE SPARKS, JOSH MERRICK
 
 ## Flow Chart
 
-Start:  This is the starting point of the _printf function.
-1. Initialize i, j, os, args, parm:  At this step, variables i and j are initialized to zero to track the current position in the format string and the output string, respectively. Memory is allocated for the output string (os) and other necessary variables like args and parm are initialized.
----->
-2. Allocate memory for os:  Memory is dynamically allocated to hold the output string. The size is chosen to be 1024 bytes in this implementation.
----->
-3. Check if allocation was successful:  This checks if the memory allocation for the output string was successful. If not, the function returns -1.
----->
-4. Initialize parm with format:  The va_list parm is initialized with the format string.
----->
-5. Loop through format characters:  This step involves iterating through each character in the format string.
----->
-6. End of format string:  This checks if the end of the format string has been reached. If so, the processing of the format string is complete.
-<-- or -->
-7. End of Format Specifiers:  This checks if all format specifiers have been processed. If so, it proceeds to write the output string to stdout.
----->
-8. Write output string to stdout:  This step involves writing the generated output string to the standard output.
----->
-9. Free memory allocated for os:  After writing the output string, the dynamically allocated memory for the output string is released to avoid memory leaks.
-End:  This marks the end of the _printf function.
++ Start: This is the starting point of the flowchart. The program execution begins here. --->
++ Initialize vars: In this step, variables used in the function are initialized. This includes iterators i and j, and pointers os and args. --->
++ Allocate memory for os: Memory is dynamically allocated for the output string os. --->
++ Start varargs: This step initializes the variable argument list for processing the format string. --->
++ Loop through format string: The function iterates through the format string character by character. --->
++ Check if '%' encountered: At each iteration, the function checks if the current character is a '%'. --->
++ Process % specifier: If a '%' is encountered, the function processes the specifier following it ('c', 's', 'd', 'i', or '%%'). --->
++ Append to output string: Depending on the specifier, the function appends characters to the output string os. --->
++ Check output size: After each append operation, the function checks if the size of the output string exceeds a certain limit (1024 characters). --->
++ Write to stdout: If the size limit is reached, the function writes the current contents of the output string to the standard output (stdout). --->
++ Reset output string: After writing to stdout, the output string os is reset to prepare for further appending. --->
++ Continue loop through format string: The function continues iterating through the format string until the end is reached. --->
++ End of format string: When the end of the format string is reached, the function ends the loop. --->
++ End: Finally, the function reaches the end, and program execution stops.
 
 
 ## Description
